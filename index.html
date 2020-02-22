@@ -4,16 +4,59 @@
   <meta charset="utf-8">
   <meta name="viewport"
      content="width=device-width, initial-scale=1, user-scalable=yes">
+  <link rel="stylesheet" type="text/css" href="webDesign.css">
 
   <title>Project Foodz sa Elbi</title>
 </head>
 <body>
+<!-- <script type="text/javascript" src="foodz.cs"></script> -->
 <div>
     <a href="index.html">HOME</a>
     <a href="browse.html">BROWSE</a>
     <a href="wheel.html">WHEEL</a>
     <a href="about.html">ABOUT</a>
 </div>
+<div class = "slideshow-container">
+	<div class = "mySlides">
+	  <div class="numbertext">1 / 3</div>
+	  <img src="images/Chelseas.jpg" style="width:100%" height="750px">
+	  <div class="text">Chelsea's @ Searca</div>
+	</div>
+
+	<div class = "mySlides">
+	  <div class="numbertext">2 / 3</div>
+	  <img src="images/coop.jpg" style="width:100%" height="750px">
+	  <div class="text">Coop Canteen</div>
+	</div>
+
+	<div class = "mySlides">
+	  <div class="numbertext">3 / 3</div>
+	  <img src="images/physci_canteen.jpg" style="width:100%" height="750px">
+	  <div class="text">Physical Sciences Building Canteen</div>
+	</div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  // var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  // for (i = 0; i < dots.length; i++) {
+  //   dots[i].className = dots[i].className.replace(" active", "");
+  // }
+  slides[slideIndex-1].style.display = "block";  
+  // dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
 
 <h3>On a budget?</h3>
 <p>Enter your budget and we'll find the best foods for you!</p>
