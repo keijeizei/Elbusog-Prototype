@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Tasty Recipes</title>
+    <title>Elbusog Foods</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -80,7 +80,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>Recipe Details</h3>
+                        <h3>Food Recommendation</h3>
                     </div>
                 </div>
             </div>
@@ -118,11 +118,59 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- recepie_area_start  -->
+    <!-- WE CAN MAKE THIS PART AS A SECOND, THIRD, AND FOURTH RECOMMENDATION TO THE USER-->
+    <!-- WE CAN ALSO MAKE AN RANDOMIZER BUTTON TO GIVE A RANDOM FOOD PLACE BASED ON THE RECOMMENDATIONS-->
+    <!-- OR RANDOMIZE ALL THE FOOD PLACES-->
+    <div class="recepie_area inc_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <p><strong>You might also like:</strong></p>
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_1.png" alt="">
+                        </div>
+                        <h3 id="secondName">Tita Cora's</h3>
+                        <span id="secondRating">5 stars</span>
+                        <p id="secondPrice">Price range: less than P60</p>
+                        <a class="line_btn" id="secondButton" onclick="recommendAnother(2)">See Reviews</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <p> </p>
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_2.png" alt="">
+                        </div>
+                        <h3 id="thirdName">Selina's</h3>
+                        <span id="thirdRating">5 stars</span>
+                        <p id="thirdPrice">Price range: P60 - P100</p>
+                        <a class="line_btn" id="thirdButton" onclick="recommendAnother(3)">See Reviews</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <p><strong>Team's Choice:</strong></p>
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_3.png" alt="">
+                        </div>
+                        <!--does not change-->
+                        <h3>Big Belly's</h3>
+                        <span>5 stars</span>
+                        <p>Price range: P60 - P100</p>
+                        
+                        <a class="line_btn" onclick="recommendAnother(4)">See Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /recepie_area_start  -->
 
             <script>
-                // this script retrieves the data from the choices made by the user and prints them
-                // later, this should be used to give personal recommendations to the user
-
                 var database = {"Tita Cora's": [1, 4, 1,
                                 "<br>Tita Cora's is a small store located near dorms and apartments inside Raymundo Gate that offers a variety of student-friendly meals. It has a warm atmosphere due to its family-like setting with a single long table to seat its customers."],
                                 "Parduch": [1, 4, 2, 
@@ -145,6 +193,13 @@
                 var thirdChoice = {};
                 var secondChoice = {};
                 var firstChoice = {};
+
+                var secondKey = "";
+                var thirdKey = "";
+                //var firstArray = [];
+
+                //var firstRandom = 0;
+
                 //const data = document.getElementById("retrieveData");
                 const name = document.getElementById("foodShopName");
                 const pricerange = document.getElementById("pricerange");
@@ -155,6 +210,7 @@
                 var price = localStorage.getItem("answer1"); // 1: <60, 2: 60-100, 3: >100, 4: no pref
                 var crave = localStorage.getItem("answer2"); // 1: meat, 2: veggies, 3: noodles, 4: no pref
                 var place = localStorage.getItem("answer3"); // 1; raymundo, 2: grove, 3: campus, 4: no pref
+                
 
                 //data.innerHTML = price.concat(crave, place);
 
@@ -217,6 +273,14 @@
                     }
                 }
 
+                //for(var key in firstChoice) {
+                //    firstArray.push(key);
+                //}
+
+                //When randomizer is available, data size is too small
+                //firstRandom = Math.floor(Math.random() * firstArray.length);
+                //firstChoice[firstArray[firstRandom]];
+
                 //prints the first key in firstChoice
                 for(var key in firstChoice) {
                     var value = firstChoice[key];
@@ -255,58 +319,76 @@
                     else if(value[2] == 3) {
                         placerange.innerHTML = "<strong>Location</strong> :  Inside UPLB Campus";
                     }
+
+                    delete thirdChoice[key]; //removes the main recommendation from thirdChoice
                     break;
+                }
+
+                //prints the first key in thirdChoice
+                for(var key in thirdChoice) {
+                    var value = thirdChoice[key];
+
+                    secondName.innerHTML = key;
+
+                    if(value[0] == 1) {
+                        secondPrice.innerHTML = "Price Range : P60 and below";
+                    }
+                    else if(value[0] == 2) {
+                        secondPrice.innerHTML = "Price Range : P60 to P100";
+                    }
+                    else if(value[0] == 3) {
+                        secondPrice.innerHTML = "Price Range : P100 and above";
+                    }
+                    secondKey = key;
+                    break;
+                }
+
+                //prints the last key in thirdChoice
+                for(var key in thirdChoice) {
+                    var value = thirdChoice[key];
+                    if(key != secondKey) {
+                        thirdName.innerHTML = key;
+
+                        if(value[0] == 1) {
+                            thirdPrice.innerHTML = "Price Range : P60 and below";
+                        }
+                        else if(value[0] == 2) {
+                            thirdPrice.innerHTML = "Price Range : P60 to P100";
+                        }
+                        else if(value[0] == 3) {
+                            thirdPrice.innerHTML = "Price Range : P100 and above";
+                        }
+                        thirdKey = key;
+                    }
+                }
+                
+
+                function recommendAnother(choice) {
+                    switch(choice) {
+                        case 2:
+                            var valueOfKey = thirdChoice[secondKey];
+                            localStorage.setItem("answer1", valueOfKey[0]);
+                            localStorage.setItem("answer2", valueOfKey[1]);
+                            localStorage.setItem("answer3", valueOfKey[2]);
+                            window.location.href = "food.html";
+                            break;
+                        case 3:
+                            var valueOfKey = thirdChoice[thirdKey];
+                            localStorage.setItem("answer1", valueOfKey[0]);
+                            localStorage.setItem("answer2", valueOfKey[1]);
+                            localStorage.setItem("answer3", valueOfKey[2]);
+                            window.location.href = "food.html";
+                            break;
+                        case 4:
+                            window.location.href = "teamschoice.html";
+                            break;
+                    }
                 }
             </script>
 
 
                         
-        </div>
-    </div>
-    <!-- recepie_area_start  -->
-    <!-- WE CAN MAKE THIS PART AS A SECOND, THIRD, AND FOURTH RECOMMENDATION TO THE USER-->
-    <!-- WE CAN ALSO MAKE AN RANDOMIZER BUTTON TO GIVE A RANDOM FOOD PLACE BASED ON THE RECOMMENDATIONS-->
-    <!-- OR RANDOMIZE ALL THE FOOD PLACES-->
-    <div class="recepie_area inc_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_1.png" alt="">
-                        </div>
-                        <h3>Tita Cora's</h3>
-                        <span>Karinderia</span>
-                        <p>Price range: less than P60</p>
-                        <a href="#" class="line_btn">See Reviews</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_2.png" alt="">
-                        </div>
-                        <h3>Selina's</h3>
-                        <span>Restaurant</span>
-                        <p>Price range: P60 - P100</p>
-                        <a href="#" class="line_btn">See Reviews</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_3.png" alt="">
-                        </div>
-                        <h3>Seoul Kitchen</h3>
-                        <span>Korean Restaurant</span>
-                        <p>Price range: P100 above</p>
-                        <a href="#" class="line_btn">See Reviews</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /recepie_area_start  -->
+        
 
     <!-- footer  -->
     <footer class="footer">
