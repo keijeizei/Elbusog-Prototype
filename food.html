@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/star.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -103,7 +104,22 @@
 
                         <div class="resepies_details">
                             <ul>
-                                <li><p><strong>Rating</strong> : <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </p></li>
+                                <div class="resepies_details">
+                                    <ul>
+                                        <li>
+                                          <div class="rating">
+                                            <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                                            <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                                            <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                                            <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                                            <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                                            <p><strong>Rating</strong> : </p>
+                                          </div>
+                                        </li><br>
+                                        <li><p><strong>Category</strong> : Main Dish </p></li>
+                                        <li><p><strong>Tags</strong> :  Breakfast, Lunch, Dinner, Vegan</p></li>
+                                    </ul>
+                                </div>
                                 <li><p id="pricerange"></p></li>
                                 <li><p id="foodrange"></p></li>
                                 <li><p id="placerange"></p></li>
@@ -158,7 +174,7 @@
                             <img src="img/recepie/recpie_3.png" alt="">
                         </div>
                         <!--does not change-->
-                        <h3>Big Belly's</h3>
+                        <h3>Belly's</h3>
                         <span>5 stars</span>
                         <p>Price range: P60 - P100</p>
                         
