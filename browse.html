@@ -92,10 +92,151 @@
         </div>
         </div>
     </div>
+    <!-- INSERT -->
+    <div class = "slideshow-container">
+        <div class = "mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div>
+            <img src="img/Chelsea's.jpg" width="1980" height="1080">
+            <div class="slidetext">Chelsea's @ Searca</div> -->
+            <div class="row1"> <!---->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_1.png" alt="">
+                        </div>
+                        <h3>Chelsea's</h3>
+                        <span>Karinderia</span>
+                        <p>Price range: less than P60</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_2.png" alt="">
+                        </div>
+                        <h3>PhySci Canteen</h3>
+                        <span>Restaurant</span>
+                        <p>Price range: P60 - P100</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_3.png" alt="">
+                        </div>
+                        <h3>COOP Canteen</h3>
+                        <span>Korean Restaurant</span>
+                        <p>Price range: P100 above</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "mySlides fade">
+            <div class="row1"> 
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_4.png" alt="">
+                        </div>
+                        <h3>Parduch</h3>
+                        <span>Karinderia</span>
+                        <p>Price range: less than P60</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_5.png" alt="">
+                        </div>
+                        <h3>Aico's Canteen</h3>
+                        <span>Restaurant</span>
+                        <p>Price range: P60 - P100</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_6.png" alt="">
+                        </div>
+                        <h3>Vraja</h3>
+                        <span>Korean Restaurant</span>
+                        <p>Price range: P100 above</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "mySlides fade">
+            <div class="row1"> 
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_1.png" alt="">
+                        </div>
+                        <h3>Chelsea's</h3>
+                        <span>Karinderia</span>
+                        <p>Price range: less than P60</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_2.png" alt="">
+                        </div>
+                        <h3>Selina's</h3>
+                        <span>Restaurant</span>
+                        <p>Price range: P60 - P100</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/recepie/recpie_3.png" alt="">
+                        </div>
+                        <h3>Seoul Kitchen</h3>
+                        <span>Korean Restaurant</span>
+                        <p>Price range: P100 above</p>
+                        <a href="#" class="line_btn">See Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        // var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        // for (i = 0; i < dots.length; i++) {
+        //   dots[i].className = dots[i].className.replace(" active", "");
+        // }
+        slides[slideIndex-1].style.display = "block";
+        // dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 1 seconds
+    }
+    </script>
+    <!-- END -->
     <div class="recepie_area">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
+            <!-- <div class="row">  -->
+               <!--  <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single_recepie text-center">
                         <div class="recepie_thumb">
                             <img src="img/recepie/recpie_1.png" alt="">
@@ -128,7 +269,7 @@
                         <a href="#" class="line_btn">See Reviews</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- /recepie_area_start  -->
