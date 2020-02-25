@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-7">
-                            <div class="main-menu   d-none d-lg-block">
+                            <div class="main-menu white_text  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="index.html">home</a></li>
@@ -54,13 +54,6 @@
                                         <li><a href="browse.html">browse</a></li>
                                     </ul>
                                 </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                            <div class="search_icon">
-                                <a href="#">
-                                    <i class="ti-search"></i>
-                                </a>
                             </div>
                         </div>
                         <div class="col-12">
@@ -95,58 +88,16 @@
     <br><br><br><br><br><br><br><br>
     <!-- slider_area_end -->
 
-    <!--
-    <div class = "slideshow-container">
-        <div class = "mySlides">
-            <div class="numbertext">1 / 3</div>
-            <img src="img/Chelseas.jpg" style="width:100%" height="750px">
-            <div class="slidetext">Chelsea's @ Searca</div>
-        </div>
-
-        <div class = "mySlides">
-            <div class="numbertext">2 / 3</div>
-            <img src="img/coop.jpg" style="width:100%" height="750px">
-            <div class="slidetext">Coop Canteen</div>
-        </div>
-
-        <div class = "mySlides">
-            <div class="numbertext">3 / 3</div>
-            <img src="img/physci_canteen.jpg" style="width:100%" height="750px">
-            <div class="slidetext">Physical Sciences Building Canteen</div>
-        </div>
-    </div>
-    <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        // var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        // for (i = 0; i < dots.length; i++) {
-        //   dots[i].className = dots[i].className.replace(" active", "");
-        // }
-        slides[slideIndex-1].style.display = "block";
-        // dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-    </script>
-    -->
-
     <!-- get a resto chosen for you-->
     <div class="latest_trand_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="trand_info text-center">
-                        <p>Can't decide? Unfamiliar?</p>
-                        <h3>We'll give a good food place for you!</h3>
-                        <h2 id="question"></h2>
+                        <p style="color: white;">Can't decide? Unfamiliar?</p>
+                        <h3 style="color: white;">We'll give a good food place for you!</h3>
+                        <h2 id="question" style="color: white;"></h2>
+                        <br>
                         <a id = "choice1" href="javascript:void(0);" class="boxed-btn3" onclick="changeQuestions(1)"></a>
                         <a id = "choice2" href="javascript:void(0);" class="boxed-btn3" onclick="changeQuestions(2)"></a>
                         <a id = "choice3" href="javascript:void(0);" class="boxed-btn3" onclick="changeQuestions(3)"></a>
@@ -207,51 +158,163 @@
     }
     </script>
 
-    <!-- recepie_area_start  -->
-    <!--
-    <div class="recepie_area">
+
+    <div class="recepie_header_area">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_1.png" alt="">
-                        </div>
-                        <h3>Tita Cors'</h3>
-                        <span>Karinderia</span>
-                        <p>Price range: less than P60</p>
-                        <a href="#" class="line_btn">See Reviews</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_2.png" alt="">
-                        </div>
-                        <h3>Selina's</h3>
-                        <span>Restaurant</span>
-                        <p>Price range: P60 - P100</p>
-                        <a href="#" class="line_btn">See Reviews</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_3.png" alt="">
-                        </div>
-                        <h3>Seoul Kitchen</h3>
-                        <span>Korean Restaurant</span>
-                        <p>Price range: P100 above</p>
-                        <a href="#" class="line_btn">See Reviews</a>
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="recepie_text text-center">
+                        <h3>What's popular</h3> 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    -->
-    <!-- /recepie_area_start  -->
-    
-    <br><br><br><br>
+    <!-- INSERT -->
+    <div class = "slideshow-container">
+        <div class = "mySlides fade">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/ymca.png" alt="">
+                        </div>
+                        <h3>Family Canteen (YMCA)</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P60 and below</p>
+                        <a onclick="showFood(1, 4, 3)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/coop.png" alt="">
+                        </div>
+                        <h3>College Coop Canteen</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P60 - P100</p>
+                        <a onclick="showFood(2, 4, 3)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/vraja.png" alt="">
+                        </div>
+                        <h3>Vraja</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P100 and above</p>
+                        <a onclick="showFood(3, 2, 3)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "mySlides fade">
+            <div class="row"> 
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/titacora.png" alt="">
+                        </div>
+                        <h3>Tita Cora's</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P60 and below</p>
+                        <a onclick="showFood(1, 4, 1)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/bigd.png" alt="">
+                        </div>
+                        <h3>Big D's</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P60 - P100</p>
+                        <a onclick="showFood(2, 3, 1)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/seoul.png" alt="">
+                        </div>
+                        <h3>Seoul Kitchen</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P100 and above</p>
+                        <a onclick="showFood(3, 4, 1)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "mySlides fade">
+            <div class="row"> 
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/parduch.png" alt="">
+                        </div>
+                        <h3>Parduch</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P60 and below</p>
+                        <a onclick="showFood(1, 4, 2)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/aico.png" alt="">
+                        </div>
+                        <h3>Aico's Canteen</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P60 - P100</p>
+                        <a onclick="showFood(2, 1, 2)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_recepie text-center">
+                        <div class="recepie_thumb">
+                            <img src="img/circleThumb/bonito.png" alt="">
+                        </div>
+                        <h3>Bonito's</h3>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        <p>Price range: P100 and above</p>
+                        <a onclick="showFood(3, 4, 2)" class="line_btn">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        // var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        // for (i = 0; i < dots.length; i++) {
+        //   dots[i].className = dots[i].className.replace(" active", "");
+        // }
+        slides[slideIndex-1].style.display = "block";
+        // dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 1 seconds
+    }
+
+    function showFood(price, crave, place){ //Displays the page featuring a particular food place
+    	localStorage.setItem("answer1", price);
+    	localStorage.setItem("answer2", crave);
+    	localStorage.setItem("answer3", place);
+    	window.location.href = "food.html";
+    }
+    </script>
+    <!-- END -->
 
     <!-- footer  -->
     <footer class="footer">
@@ -270,12 +333,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.facebook.com">
                                             <i class="ti-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.twitter.com">
                                             <i class="ti-twitter-alt"></i>
                                         </a>
                                     </li>

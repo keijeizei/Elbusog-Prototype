@@ -25,9 +25,8 @@
     position: relative;
     /*float: left;*/
     width: 1980px;
-    height: 1080px;
-    margin: auto;
-    margin-bottom: 200px;
+    height: 580px;
+    margin-bottom: 20px;
   }
   .fade {
     -webkit-animation-name: fade;
@@ -498,6 +497,7 @@ h3 {
   transition: 0.5s;
   display: inline-block;
   border: 1px solid transparent;
+  margin: 0 5px;
 }
 
 /* line 45, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_btn.scss */

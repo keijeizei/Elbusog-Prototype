@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Elbusog Foods</title>
+    <title>Elbusog Food</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -57,13 +57,6 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                            <div class="search_icon">
-                                <a href="#">
-                                    <i class="ti-search"></i>
-                                </a>
-                            </div>
-                        </div>
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
@@ -94,7 +87,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-md-6">
                     <div class="recepies_thumb">
-                        <img src="img/recepie/recepie_details.png" alt="">
+                        <img id="mainPic" src="img/recepie/recepie_details.png" alt="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-md-6">
@@ -126,9 +119,8 @@
                             </ul>
                         </div>
                         <div class="links">
-                            <a href="#"> <i class="fa fa-facebook"></i> </a>
-                            <a href="#"> <i class="fa fa-twitter"></i> </a>
-                            <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                            <a href="https://www.facebook.com"> <i class="fa fa-facebook"></i> </a>
+                            <a href="https://www.twitter.com"> <i class="fa fa-twitter"></i> </a>
                         </div>
                     </div>
                 </div>
@@ -146,38 +138,38 @@
                     <div class="single_recepie text-center">
                         <p><strong>You might also like:</strong></p>
                         <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_1.png" alt="">
+                            <img id="secondCircleThumb" src="img/recepie/recpie_1.png" alt="">
                         </div>
                         <h3 id="secondName">Tita Cora's</h3>
-                        <span id="secondRating">5 stars</span>
+                        <span id="secondRating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                         <p id="secondPrice">Price range: less than P60</p>
-                        <a class="line_btn" id="secondButton" onclick="recommendAnother(2)">See Reviews</a>
+                        <a class="line_btn" id="secondButton" onclick="recommendAnother(2)">More Details</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single_recepie text-center">
                         <p> </p>
                         <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_2.png" alt="">
+                            <img id="thirdCircleThumb" src="img/recepie/recpie_2.png" alt="">
                         </div>
                         <h3 id="thirdName">Selina's</h3>
-                        <span id="thirdRating">5 stars</span>
+                        <span id="thirdRating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                         <p id="thirdPrice">Price range: P60 - P100</p>
-                        <a class="line_btn" id="thirdButton" onclick="recommendAnother(3)">See Reviews</a>
+                        <a class="line_btn" id="thirdButton" onclick="recommendAnother(3)">More Details</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single_recepie text-center">
                         <p><strong>Team's Choice:</strong></p>
                         <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_3.png" alt="">
+                            <img src="img/circleThumb/bigbelly.png" alt="">
                         </div>
                         <!--does not change-->
                         <h3>Big Belly's</h3>
-                        <span>5 stars</span>
+                        <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                         <p>Price range: P60 - P100</p>
                         
-                        <a class="line_btn" onclick="recommendAnother(4)">See Reviews</a>
+                        <a class="line_btn" onclick="recommendAnother(4)">More Details</a>
                     </div>
                 </div>
             </div>
@@ -187,23 +179,23 @@
 
             <script>
                 var database = {"Tita Cora's": [1, 4, 1,
-                                "<br>Tita Cora's is a small store located near dorms and apartments inside Raymundo Gate that offers a variety of student-friendly meals. It has a warm atmosphere due to its family-like setting with a single long table to seat its customers."],
+                                "<br>Tita Cora's is a small store located near dorms and apartments inside Raymundo Gate that offers a variety of student-friendly meals. It has a warm atmosphere due to its family-like setting with a single long table to seat its customers.", "img/circleThumb/titacora.png", "img/mainPic/titacora.jpg"],
                                 "Parduch": [1, 4, 2, 
-                                "<br>Parduch is your typical karinderya with a large variety of food being served each day. If you're on a tight budget and happen to be near Raymundo, Parduch has your back as they also allow half servings of your favorite meals."],
+                                "<br>Parduch is your typical karinderya with a large variety of food being served each day. If you're on a tight budget and happen to be near Raymundo, Parduch has your back as they also allow half servings of your favorite meals.", "img/circleThumb/parduch.png", "img/mainPic/parduch.jpg"],
                                 "Family Canteen (YMCA)": [1, 4, 3, 
-                                "<br>The Family Canteen is located inside the university near the Women's and Men's Residence Hall. They sell meals at a very low price making it highly affordable. If a student wants to save some money, the canteen also has a 'student meal' offer where half of the regular portion is served."],
+                                "<br>The Family Canteen is located inside the university near the Women's and Men's Residence Hall. They sell meals at a very low price making it highly affordable. If a student wants to save some money, the canteen also has a 'student meal' offer where half of the regular portion is served.", "img/circleThumb/ymca.png", "img/mainPic/ymca.jpg"],
                                 
                                 "Big D's": [2, 3, 1, 
-                                "<br>Big D's offers japanese food and rice meals at a decent price with tables inside and by the street. If you want to try some of their unique types of ramen or other delicious dishes on the menu, you can visit them at Ruby Street."],
+                                "<br>Big D's offers japanese food and rice meals at a decent price with tables inside and by the street. If you want to try some of their unique types of ramen or other delicious dishes on the menu, you can visit them at Ruby Street.", "img/circleThumb/bigd.png", "img/mainPic/bigd.jpg"],
                                 "Aico's Canteen": [2, 1, 2, 
-                                "<br>Aico's, mostly referred to as Tonton's, serves one of Elbi's best sisig and is situated at the Grove. If you're not in the mood for sisig, Aico's does deliver other meals that are simply delicious and cheap."],
+                                "<br>Aico's, mostly referred to as Tonton's, serves one of Elbi's best sisig and is situated at the Grove. If you're not in the mood for sisig, Aico's does deliver other meals that are simply delicious and cheap.", "img/circleThumb/aico.png", "img/mainPic/aico.jpg"],
                                 "College Coop Canteen": [2, 4, 3, 
-                                "<br>The COOP Canteen is managed by the Tita Tes Fud Counter (and other cafeterias inside the campus) which is a catering that is popular here in elbi. In terms of location, COOP is literally inside the campus behind the Old Humanities building. It is a nice place to stop over and eat at when it's hot outside."],
+                                "<br>The COOP Canteen is managed by the Tita Tes Fud Counter (and other cafeterias inside the campus) which is a catering that is popular here in elbi. In terms of location, COOP is literally inside the campus behind the Old Humanities building. It is a nice place to stop over and eat at when it's hot outside.", "img/circleThumb/coop.png", "img/mainPic/coop.jpg"],
                                 
                                 "Seoul Kitchen": [3, 4, 1, 
-                                "<br>Seoul Kitchen is a korean restaurant serving appetizers, meals, coffee, and desserts. It's one of the 'top-tier' restaurants in elbi so if you can afford it or if you're feeling luxurious, you can visit them at F.O. Santos St. and enjoy the delicious food they offer."],
-                                "Bonito's": [3, 4, 2, "info"],
-                                "Vraja": [3, 2, 3, "info"],
+                                "<br>Seoul Kitchen is a korean restaurant serving appetizers, meals, coffee, and desserts. It's one of the 'top-tier' restaurants in elbi so if you can afford it or if you're feeling luxurious, you can visit them at F.O. Santos St. and enjoy the delicious food they offer.", "img/circleThumb/seoul.png", "img/mainPic/seoul.jpg"],
+                                "Bonito's": [3, 4, 2, "<br>Vraja is a vegan restaurant located in UPLB Freedom Park. The food found in here might be a bit pricey but is compensated by it's exquisite taste and serene ambience.", "img/circleThumb/bonito.png", "img/mainPic/bonito.jpg"],
+                                "Vraja": [3, 2, 3, "info", "img/circleThumb/vraja.png", "img/mainPic/vraja.jpg"]
                 };
                 var thirdChoice = {};
                 var secondChoice = {};
@@ -221,6 +213,10 @@
                 const foodrange = document.getElementById("foodrange");
                 const placerange = document.getElementById("placerange");
                 const foodDescription = document.getElementById("fooddescription");
+
+                const mainPic = document.getElementById("mainPic");
+                const secondCircleThumb = document.getElementById("secondCircleThumb");
+                const thirdCircleThumb = document.getElementById("thirdCircleThumb");
 
                 var price = localStorage.getItem("answer1"); // 1: <60, 2: 60-100, 3: >100, 4: no pref
                 var crave = localStorage.getItem("answer2"); // 1: meat, 2: veggies, 3: noodles, 4: no pref
@@ -335,6 +331,8 @@
                         placerange.innerHTML = "<strong>Location</strong> :  Inside UPLB Campus";
                     }
 
+                    mainPic.src = value[5];
+
                     delete thirdChoice[key]; //removes the main recommendation from thirdChoice
                     break;
                 }
@@ -355,6 +353,7 @@
                         secondPrice.innerHTML = "Price Range : P100 and above";
                     }
                     secondKey = key;
+                    secondCircleThumb.src = value[4];
                     break;
                 }
 
@@ -374,6 +373,7 @@
                             thirdPrice.innerHTML = "Price Range : P100 and above";
                         }
                         thirdKey = key;
+                        thirdCircleThumb.src = value[4];
                     }
                 }
                 
@@ -422,12 +422,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         <div class="socail_links">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.facebook.com">
                                         <i class="ti-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.twitter.com">
                                         <i class="ti-twitter-alt"></i>
                                     </a>
                                 </li>
